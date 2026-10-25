@@ -7,6 +7,15 @@ android {
     namespace = "com.maira.assistant"
     compileSdk = 35
 
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file("maira.jks")
+            storePassword = "mairakey"
+            keyAlias = "maira"
+            keyPassword = "mairakey"
+        }
+    }
+
     defaultConfig {
         applicationId = "com.maira.assistant"
         minSdk = 24
